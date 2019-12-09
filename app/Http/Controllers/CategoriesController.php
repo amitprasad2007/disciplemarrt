@@ -18,7 +18,7 @@ class CategoriesController extends Controller
                                 ->leftJoin('categories as cat', 'categories.parent_id', '=', 'cat.id')
 								->orderby('categories.id','desc')
 								->get();
-         echo '<pre>'; print_r($categories); die;
+        // echo '<pre>'; print_r($categories); die;
         return view('admin.categories.index', compact('categories'));
     }
 
